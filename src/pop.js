@@ -1,4 +1,4 @@
-define(['d3','lodash','./parsers/index'], function(d3,_, parsers){
+define(['d3','lodash','parsers/index'], function(d3,_, parsers){
     /**
      * @function d3.pop
      * @static

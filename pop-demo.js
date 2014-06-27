@@ -1,9 +1,10 @@
 requirejs.config({
+    baseUrl: 'src',
     paths: {
         'd3': '//cdnjs.cloudflare.com/ajax/libs/d3/3.4.8/d3.min',
         'lodash': '//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min',
         'mathjs': '//cdnjs.cloudflare.com/ajax/libs/mathjs/0.23.0/math.min',
-        'pop': 'src/pop'
+        'yaml': '//cdnjs.cloudflare.com/ajax/libs/js-yaml/3.0.2/js-yaml.min'
     },
     shim: {
         'd3': {

@@ -3,11 +3,31 @@
 <title>D3 Pop</title>
 </head>
 <body>
-<script data-pop type="text/pop">foo</script>
-<hr>
-<script data-pop type="text/pop">bar</script>
-<hr>
-<script data-pop type="text/pop">baz</script>
+<script data-pop type="text/pop/yaml">
+scenes:
+  - label-type: tex
+    index: 0
+    contents:
+      - type: axes
+      - type: vector
+        id: x1
+        value: p
+        from: "[0,0,0]"
+      - type: vector
+        class: dotted
+        id: x2
+        value: "[1,1,0]"
+        from: p
+    events:
+      - on: click
+        action: nextState()
+    states:
+      - index: 0
+        state:
+          - pick: {id: x2}
+            class: -dotted
+            val: "p = [0,1,0]"
+</script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.11/require.min.js" data-main="pop-demo"></script>
 </body>
 </html>
